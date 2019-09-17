@@ -13,6 +13,9 @@ public class RegisterUserCommand {
 
     private Set<Role> roles;
 
+    public RegisterUserCommand() {
+    }
+
     public String getEmail() {
         return email;
     }

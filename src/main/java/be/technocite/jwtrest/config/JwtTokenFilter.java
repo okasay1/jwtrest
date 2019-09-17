@@ -30,12 +30,11 @@ public class JwtTokenFilter extends GenericFilterBean {
         if (token != null && jwTokenProvider.validateToken(token)) {
             Authentication authentication = jwTokenProvider.getAuthentication(token);
             SecurityContextHolder.getContext().setAuthentication((authentication));
-            // dans cette manière de faire on passe dans tous les cas la requête au filtre suivant
-            chain.doFilter(request, response);
-        } else {
-            return;
+
         }
 
+        // dans cette manière qu'importe que la requête soit bonne ou non pour ce filter on le fera passer au filter suivant
+        chain.doFilter(request, response);
 
     }
 }
