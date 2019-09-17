@@ -10,7 +10,6 @@ public class RegisterUserCommand {
     private String email;
     private String password;
     private String fullname;
-
     private Set<Role> roles;
 
     public RegisterUserCommand() {

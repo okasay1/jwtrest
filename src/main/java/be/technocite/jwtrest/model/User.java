@@ -43,6 +43,14 @@ public class User {
         this.roles = roles;
     }
 
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setFullname(String fullname) {
+        this.fullname = fullname;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
